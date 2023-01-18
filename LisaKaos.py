@@ -160,12 +160,9 @@ async def current_time():
 
     now = time.strftime("%H:%M do dia %d/%m")
 
-    channel1 = bot.get_channel(955883346590826566)
-    channel2 = bot.get_channel(964608318616256522)
+    channel1 = bot.get_channel(seu canal)
 
     await channel1.send("Agora são " + now)
-    await channel2.send("Espero que esteja aproveitando seu dia!" + " Lisa gives U a little kissu 😘")
-    await channel2.send("Data atual: " + now)
 
 
 bot.load_extension("cogs.teste.cog")
