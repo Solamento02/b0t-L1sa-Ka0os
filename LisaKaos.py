@@ -164,6 +164,5 @@ async def current_time():
 
     await channel1.send("Agora são " + now)
 
-
 bot.load_extension("cogs.teste.cog")
 bot.run(TOKEN)
