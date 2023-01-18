@@ -1,31 +1,16 @@
-from cmath import pi
-from ctypes.wintypes import HMODULE
-from html.entities import name2codepoint
-from pdb import pm
-from random import sample
-from re import M
-from ssl import CHANNEL_BINDING_TYPES
-import string
-from threading import Timer
-from webbrowser import get
-from setuptools import Command
-from tokenize import Token
-from tracemalloc import start
-from unicodedata import name
+import discord
 import os
-from dotenv import load_dotenv
-import discord
-import textwrap
-from datetime import date, time, datetime, timezone
-import datetime as dt
 import time
-import discord
+from datetime import datetime
 from discord.ext import commands, tasks
-from discord.ext.commands import Bot
+from discord.ext.commands import bot
+from dotenv import load_dotenv
+from tokenize import Token
 import asyncio
 
-bot = commands.Bot("!")
-Intents = (discord.Intents.all)
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix="%", intents=intents)
 Activity_string = "on {} servers.format(len(bot.guilds))"
 now = datetime.now()
 now_string=now.strftime("%d/%m/%Y %H:%M:%S")
@@ -33,13 +18,10 @@ now_string=now.strftime("%d/%m/%Y %H:%M:%S")
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
-
 @bot.event
 async def on_ready():
     await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.watching, name = "Você 👀"))
     print('Connected to bot: {}'.format(bot.user.name))
-    print('Bot ID: {}'.format(bot.user.id))
-    print('Pronto!')
     current_time.start()
 
 @bot.command(name="Hey")
@@ -131,6 +113,12 @@ async def send_message(ctx):
     print = "Lisa ama muito você ❤ " + name
     await ctx.send(print)
 
+@bot.command(name="Rolagem_Lisa")
+async def send_message(ctx):
+    name = ctx.author.name
+    print = "O dado d6 rolou 3 sendo: _There is a meeting of lords to discuss trade_" + " Espero ter ajudado " + name
+    await ctx.send(print)
+
 @bot.command(name="Lisa?")
 async def ping(ctx):
     await ctx.send(f'Meow! {round(bot.latency * 1000)}ms')
@@ -172,10 +160,13 @@ async def current_time():
 
     now = time.strftime("%H:%M do dia %d/%m")
 
-    channel1 = bot.get_channel() #canal da sua preferência
+    channel1 = bot.get_channel(955883346590826566)
+    channel2 = bot.get_channel(964608318616256522)
 
-    await channel1.send("Espero que esteja aproveitando seu dia!" + " Lisa gives U a little kissu 😘")
-    await channel1.send("Data atual: " + now)
+    await channel1.send("Agora são " + now)
+    await channel2.send("Espero que esteja aproveitando seu dia!" + " Lisa gives U a little kissu 😘")
+    await channel2.send("Data atual: " + now)
 
 
+bot.load_extension("cogs.teste.cog")
 bot.run(TOKEN)
