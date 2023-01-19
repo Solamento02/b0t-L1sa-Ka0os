@@ -113,12 +113,6 @@ async def send_message(ctx):
     print = "Lisa ama muito você ❤ " + name
     await ctx.send(print)
 
-@bot.command(name="Rolagem_Lisa")
-async def send_message(ctx):
-    name = ctx.author.name
-    print = "O dado d6 rolou 3 sendo: _There is a meeting of lords to discuss trade_" + " Espero ter ajudado " + name
-    await ctx.send(print)
-
 @bot.command(name="Lisa?")
 async def ping(ctx):
     await ctx.send(f'Meow! {round(bot.latency * 1000)}ms')
