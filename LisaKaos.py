@@ -42,12 +42,6 @@ async def send_message(ctx):
     await ctx.send("Oii")
     await ctx.send("Gay")
 
-@bot.command(name="admin_")
-async def send_message(ctx):
-    name = "Noahzito#5972 e Zoroégay#3568"
-    print = "Rawr!Os donos desse bot são: " + name
-    await ctx.send(print)
-
 @bot.command(name="Linhas")
 async def send_message(ctx):
     name = ctx.author.name
