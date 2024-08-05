@@ -2,7 +2,7 @@
 Bot inspired on my cat meowing at night, made for remember those situations;
 
 # Requirements:
-  [<img title="Python" alt="Python" height="75px" width="125px" src="https://cdn.gabrieleromanato.com/5c37214980b3/uploads/python-alt.png" />](https://www.python.org/downloads/)
+  [<img title="Python" alt="Python" height="40px" width="40px" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Python-Dark.svg" />](https://www.python.org/downloads/)
 
 > Put your token and channel ID on your places;
 
@@ -15,7 +15,7 @@ Bot inspired on my cat meowing at night, made for remember those situations;
 Bot inspirado no meu gato miando a noite, feito para relembrar dessas situações;
 
 # Requisitos: 
-  [<img title="Python" alt="Python" height="75px" width="125px" src="https://cdn.gabrieleromanato.com/5c37214980b3/uploads/python-alt.png" />](https://www.python.org/downloads/)
+  [<img title="Python" alt="Python" height="40px" width="40px" src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Python-Dark.svg" />](https://www.python.org/downloads/)
 
 
 > Colocar token e channel nos seus locais
